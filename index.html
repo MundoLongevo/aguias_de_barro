@@ -31,15 +31,12 @@ body {
 /* ── HERO: imagem separada do título ── */
 .hero-image-block {
   width: 100%;
-  max-height: 520px;
-  overflow: hidden;
   position: relative;
+  line-height: 0;
 }
 .hero-image-block img {
   width: 100%;
-  height: 520px;
-  object-fit: cover;
-  object-position: center top;
+  height: auto;
   display: block;
 }
 .hero-image-block::after {
@@ -47,8 +44,9 @@ body {
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom,
-    rgba(10,25,45,0.05) 0%,
-    rgba(10,25,45,0.45) 100%);
+    rgba(10,25,45,0.0) 0%,
+    rgba(10,25,45,0.35) 100%);
+  pointer-events: none;
 }
 .hero-title-block {
   background: var(--navy2);
@@ -386,7 +384,7 @@ footer {
   section { padding: 2.5rem 0; }
 
   /* Hero */
-  .hero-image-block img { height: 260px; object-position: center top; }
+  .hero-image-block img { height: auto; }
   .hero-title-block { padding: 2rem 1.1rem 2.4rem; }
   .hero-title-block h1 { font-size: 1.75rem; line-height: 1.15; }
   .hero-subtitle { font-size: 1rem; }
